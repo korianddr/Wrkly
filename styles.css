@@ -213,6 +213,30 @@ nav a:hover {
     }
 }
 
+/* Navigation styles */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Responsive navigation */
+@media (max-width: 720px) {
+    .main-nav {
+        justify-content: flex-end;
+        gap: 0;
+    }
+    .nav-hide-mobile {
+        display: none !important;
+    }
+    .nav-get-app {
+        /* Optionally center or right-align */
+        margin-left: auto;
+        font-weight: 600;
+        /* Add padding or style as needed */
+    }
+}
+
 /* Buttons - Playful & Engaging */
 .btn {
     display: inline-flex;
