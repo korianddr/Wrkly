@@ -31,7 +31,7 @@
                 <nav class="main-nav">
                     <a href="#how" class="nav-link nav-hide-mobile">How it works</a>
                     <a href="#why" class="nav-link nav-hide-mobile">Why different</a>
-                    <a href="#signup" class="nav-link nav-get-app">Get the app</a>
+                    <a href="#signup" class="nav-link nav-get-app" id="nav-get-app">Get the app</a>
                 </nav>
             </div>
         </div>
@@ -46,7 +46,7 @@
                         <div class="hero-text">
                             <h1>Struggling to stay focused?</h1>
                             <p>Wrkly gives you instant fixes for procrastination, overwhelm, and low concentration – right when you need them</p>
-                            <button class="btn btn-primary btn-hero" onclick="scrollToSignup()" data-analytics="cta_hero_click">Get the app 🚀</button>
+                            <button class="btn btn-primary btn-hero" id="btn-hero-get-app" onclick="scrollToSignup()">Get the app 🚀</button>
                         </div>
                         <div class="hero-image">
                             <img src="assets/svg/owl-hero-happy.svg" alt="Happy owl mascot welcoming users" width="240" height="200">
@@ -189,7 +189,7 @@
                                 <label for="email" class="sr-only">Email address</label>
                                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
                                   <input type="hidden" value="Wrkly" name="subject">
-                                <button type="submit" class="btn btn-primary">Join the waitlist 💌</button>
+                                <button type="submit" class="btn btn-primary" id="btn-join-waitlist">Join the waitlist 💌</button>
                             </div>
                             <p class="form-helper">🔒 No spam, unsubscribe anytime</p>
                             <div class="form-message" id="form-message"></div>
@@ -211,7 +211,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script data-goatcounter="https://wrkly.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://wrkly.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

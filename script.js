@@ -279,5 +279,44 @@ function createFloatingParticles() {
     }
 }
 
-// Uncomment to enable floating particles
-// createFloatingParticles();}
+// Sending custom clicks to GoatCounter
+
+// "Get the app" in header
+document.getElementById('nav-get-app').addEventListener('click', function() {
+  goatcounter.count({
+    path: 'click_nav-get-app',   // custom event name
+    event: true            // marks it as a custom event
+  });
+});
+
+// "Get the app" in hero section
+document.getElementById('btn-hero-get-app').addEventListener('click', function() {
+  goatcounter.count({
+    path: 'click_btn-hero-get-app',
+    event: true
+  });
+});
+
+// "Join the waitlist" in footer form
+document.getElementById('btn-join-waitlist').addEventListener('click', function() {
+  goatcounter.count({
+    path: 'click_btn-join-waitlist',
+    event: true
+  });
+});
+
+// Scroll depth tracking
+(function(){
+  const marks = [25, 50, 75, 100];
+  const fired = new Set();
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = ((window.scrollY + window.innerHeight) / doc.scrollHeight) * 100;
+    marks.forEach(m => {
+      if (pct >= m && !fired.has(m)) {
+        fired.add(m);
+        goatcounter.count({ path: 'scroll_' + m, event: true });
+      }
+    });
+  }, { passive: true });
+})();
