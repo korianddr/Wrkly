@@ -306,17 +306,17 @@ document.getElementById('btn-join-waitlist').addEventListener('click', function(
 });
 
 // Scroll depth tracking
-(function(){
-  const marks = [25, 50, 75, 100];
-  const fired = new Set();
-  window.addEventListener('scroll', () => {
-    const doc = document.documentElement;
-    const pct = ((window.scrollY + window.innerHeight) / doc.scrollHeight) * 100;
-    marks.forEach(m => {
-      if (pct >= m && !fired.has(m)) {
-        fired.add(m);
-        goatcounter.count({ path: 'scroll_' + m, event: true });
-      }
-    });
-  }, { passive: true });
-})();
+// (function(){
+//   const marks = [25, 50, 75, 100];
+//   const fired = new Set();
+//   window.addEventListener('scroll', () => {
+//     const doc = document.documentElement;
+//     const pct = ((window.scrollY + window.innerHeight) / doc.scrollHeight) * 100;
+//     marks.forEach(m => {
+//       if (pct >= m && !fired.has(m)) {
+//         fired.add(m);
+//         goatcounter.count({ path: 'scroll_' + m, event: true });
+//       }
+//     });
+//   }, { passive: true });
+// })();
